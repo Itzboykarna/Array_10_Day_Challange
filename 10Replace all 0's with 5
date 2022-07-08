@@ -1,0 +1,36 @@
+// { Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+int convertFive(int n);
+
+// Driver program to test above function
+int main() {
+    int T;
+    cin >> T;
+    while (T--) {
+        int n;
+        cin >> n;
+        cout << convertFive(n) << endl;
+    }
+}// } Driver Code Ends
+
+
+/*you are required to complete this method*/
+int convertFive(int n) {
+      int s=0;
+   int k=1;
+   while(n>0){
+       int temp=(n%10);
+       if(temp==0){
+             s+=5*k;
+       }
+       else{
+           s+=temp*k;
+       }
+       n/=10;
+       k=k*10;
+   }
+   return s;
+    // Your code here
+}
